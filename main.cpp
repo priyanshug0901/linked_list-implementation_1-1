@@ -70,3 +70,31 @@ n3->next=n4;       //address of n4 is stored in n4 variale(same as in n3)
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*__________________________________________________
+
+ Static memory allocation can only be done on stack whereas dynamic memory allocation can be done on both stack and heap.
+
+___________________________________________________
+
+ An example of dynamic allocation to be done on the stack is recursion where the functions are put into call stack in order of their occurrence and popped off one by one on reaching the base case.
+
+__________________________________________________
+
+  Dynamic memory is not freed(deallocated) by the compiler itself even if the scope of allocated memory finishes(as in case of stack).
+__________________________________________________
+*/
