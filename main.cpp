@@ -2,7 +2,7 @@
 #include "node.cpp"
 using namespace std;
 
-//function to create node
+//function to print node
  void print(node *head){
  cout<<endl;
   while(head!=NULL){
@@ -15,11 +15,24 @@ using namespace std;
 
 node* createNodes(){
    int data;
+   node *head=NULL;
    cin>>data;
-   
+   while(data!=-1){
+     node *newnode= new node(data);
+      if(head==NULL)
+      head=newnode;
+      else{
+        node* temp=head;
+        while(temp ->next!= NULL){
+          temp=temp->next;
+        }
+       temp->next=newnode;
 
-
-}
+      }
+      cin>>data;
+   }
+   return head;
+   }
 
 
 
@@ -29,27 +42,29 @@ node* createNodes(){
 int main() {
 
 //_________________________start
-node n1(1);
-node *head=&n1;
+// node n1(1);
+// node *head=&n1;
 
-node n2(2);
-node n3(3);
-node n4(4);
-node n5(5);
+// node n2(2);
+// node n3(3);
+// node n4(4);
+// node n5(5);
 
 
-n1.next=&n2;
-n2.next=&n3;
-n3.next=&n4;
-n4.next=&n5;
-// ________________________end
+// n1.next=&n2;
+// n2.next=&n3;
+// n3.next=&n4;
+// n4.next=&n5;
+// // ________________________end
 
-cout
-<<n1.data<<" "
-<<n1.next<<" "
-<<&n2<<" "
-<<n2.data<<" "
-<<n2.next;
+// cout
+// <<n1.data<<" "
+// <<n1.next<<" "
+// <<&n2<<" "
+// <<n2.data<<" "
+// <<n2.next;
+
+node *head=createNodes();
 
 print(head);   //_____function__definition__start_at_Line__07__ |
 
