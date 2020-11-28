@@ -1,23 +1,27 @@
-#include <bits/stdc++.h>
-#include "node.cpp"
-using namespace std;
+// #include <bits/stdc++.h>
+// #include "node.cpp"
+// using namespace std;
 // efficient method to create linked list
 
-node* createnode(){
-int data;
-node* head;
-node* tail;
-cin>>data;
-while(data!=-1){
+// node* createnode(){
+// int data;
+// node* head;
+// node* tail;
+// cin>>data;
+// while(data!=-1){
 
-  node *newnode= new node(data);
+//   node *newnode= new node(data);
   
-  if(head==NULL){
-  head=newnode;
-  tail=newnode;  }
-  else
-  newnode->next=newnode;
+//   if(head==NULL){
+//   head=newnode;
+//   tail=newnode;  }
+//   else{
+//       tail->next=newnode;   
+//   }
+//  tail=newnode;
+//   // newnode->next=newnode;
 
-cin>>data;
-}
-}
+// cin>>data;
+// }
+
+// return head;}

@@ -1,6 +1,34 @@
 #include <bits/stdc++.h>
 #include "node.cpp"
+// #include "createNode.cpp"
 using namespace std;
+
+node* createnode(){
+int data;
+node* head=NULL;
+node* tail=NULL;
+cin>>data;
+while(data!=-1){
+
+  node *newnode= new node(data);
+  
+  if(head==NULL){
+  head=newnode;
+  tail=newnode;  }
+  else{
+      tail->next=newnode;   
+  }
+ tail=newnode;
+  // newnode->next=newnode;
+
+cin>>data;
+}
+
+return head;}
+
+
+
+
 
 //function to print node
  void print(node *head){
@@ -12,7 +40,7 @@ using namespace std;
 }
 
 //function to create unknon number of nodeS
-
+/*
 node* createNodes(){
    int data;
    node *head=NULL;
@@ -33,7 +61,7 @@ node* createNodes(){
    }
    return head;
    }
-
+*/
 
 
 
@@ -64,9 +92,12 @@ int main() {
 // <<n2.data<<" "
 // <<n2.next;
 
+/*
 node *head=createNodes();
+print(head);   
+*/
 
-print(head);   //_____function__definition__start_at_Line__07__ |
+//_____function__definition__start_at_Line__07__ |
 
 
 /*
@@ -83,7 +114,9 @@ n3->next=n4;       //address of n4 is stored in n4 variale(same as in n3)
  _________________________________end 
 */
 
+node* head=createnode();
 
+print(head);
 }
 
 
