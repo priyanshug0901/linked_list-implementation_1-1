@@ -1,7 +1,26 @@
 #include <bits/stdc++.h>
 #include "node.cpp"
-// #include "createNode.cpp"
 using namespace std;
+
+
+void insertNode(node* head,int i){
+int data,count=0;
+cin>>data;
+node* newnode= new node(data);
+node *temp=head;
+
+while(count<i-1)
+{
+temp=temp->next;
+count++;  }
+
+node *next=temp->next;
+temp->next=newnode;
+newnode->next=next;
+
+}
+
+
 
 node* createnode(){
 int data;
@@ -40,28 +59,28 @@ return head;}
 }
 
 //function to create unknon number of nodeS
-/*
-node* createNodes(){
-   int data;
-   node *head=NULL;
-   cin>>data;
-   while(data!=-1){
-     node *newnode= new node(data);
-      if(head==NULL)
-      head=newnode;
-      else{
-        node* temp=head;
-        while(temp ->next!= NULL){
-          temp=temp->next;
-        }
-       temp->next=newnode;
 
-      }
-      cin>>data;
-   }
-   return head;
-   }
-*/
+// node* createNodes(){
+//    int data;
+//    node *head=NULL;
+//    cin>>data;
+//    while(data!=-1){
+//      node *newnode= new node(data);
+//       if(head==NULL)
+//       head=newnode;
+//       else{
+//         node* temp=head;
+//         while(temp ->next!= NULL){
+//           temp=temp->next;
+//         }
+//        temp->next=newnode;
+
+//       }
+//       cin>>data;
+//    }
+//    return head;
+//    }
+
 
 
 
@@ -115,7 +134,8 @@ n3->next=n4;       //address of n4 is stored in n4 variale(same as in n3)
 */
 
 node* head=createnode();
-
+print(head);
+insertNode(head,4);
 print(head);
 }
 
@@ -145,4 +165,4 @@ __________________________________________________
 
   Dynamic memory is not freed(deallocated) by the compiler itself even if the scope of allocated memory finishes(as in case of stack).
 __________________________________________________
-*/
+*/ 
