@@ -135,7 +135,10 @@ n3->next=n4;       //address of n4 is stored in n4 variale(same as in n3)
 
 node* head=createnode();
 print(head);
-insertNode(head,4);
+int i;
+cout<<endl<<"enter index and data resp. to insert node"<<endl;
+cin>>i;
+insertNode(head,i);
 print(head);
 }
 
